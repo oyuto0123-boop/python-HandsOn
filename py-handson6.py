@@ -1,5 +1,11 @@
-# * を使って直角三角形を表示する
+#20,000以下の素数の和を求める
 
-n = int(input("高さを入力して下さい: "))
-for i in range(1, n + 1):
-    print("*" * i)
+total = 0
+max = 20000
+for i in range(2, max + 1):
+    for j in range(2, (i//2) + 1):
+        if i % j == 0:
+            break
+    else:
+        total += i
+print(total)
